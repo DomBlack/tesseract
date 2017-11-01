@@ -62,8 +62,6 @@ else()
     add_subdirectory(.cppan)
 endif()
 
-find_package(OpenCL QUIET)
-
 option(BUILD_TRAINING_TOOLS "Build training tools" ON)
 
 ###############################################################################
@@ -146,7 +144,6 @@ include_directories(classify)
 include_directories(cutil)
 include_directories(dict)
 include_directories(lstm)
-include_directories(opencl)
 include_directories(textord)
 include_directories(vs2010/port)
 include_directories(viewer)
@@ -168,7 +165,6 @@ file(GLOB tesseract_src
     cutil/*.cpp
     dict/*.cpp
     lstm/*.cpp
-    opencl/*.cpp
     textord/*.cpp
     viewer/*.cpp
     wordrec/*.cpp
@@ -183,7 +179,6 @@ file(GLOB tesseract_hdr
     cutil/*.h
     dict/*.h
     lstm/*.h
-    opencl/*.h
     textord/*.h
     viewer/*.h
     wordrec/*.h
